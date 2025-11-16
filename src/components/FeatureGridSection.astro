@@ -1,0 +1,34 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+// Importa cada archivo SVG como un módulo de Astro
+import Ubicacion from '../assets/svg/ubicacion.svg';
+import Finance from '../assets/svg/finance.svg';
+import IconRisk from '../assets/svg/risk.svg';
+import IconAudit from '../assets/svg/audit.svg';
+import IconMarketing from '../assets/svg/marketing.svg';
+import IconExperience from '../assets/svg/hogar.svg';
+
+// Datos de las tarjetas: usa la variable importada como valor de 'icon'
+const servicesData = [
+    { icon: Ubicacion, title: "Assessment", color: "#00a0a0" }, // Cian
+    { icon: Finance, title: "Finance", color: "#00a0a0" },      // Cian
+    { icon: IconRisk, title: "Risk Management", color: "#ff7f41" }, // Naranja
+    { icon: IconAudit, title: "Audit & Accounting", color: "#ff7f41" }, // Naranja
+    { icon: IconMarketing, title: "Marketing", color: "#00a0a0" },   // Cian
+    { icon: IconExperience, title: "Experience", color: "#00a0a0" }, // Cian
+];
+---
+
+<section class="content-section">
+    <div class="feature-grid-section__grid">
+        {servicesData.map((service) => (
+            <ServiceCard 
+                icon={service.icon}
+                title={service.title}
+                description="Sample text. Click to select the Text Element."
+                backgroundColor={service.color}
+            />
+        ))}
+    </div>
+</section>

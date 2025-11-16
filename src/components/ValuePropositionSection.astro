@@ -1,0 +1,27 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonUrl: string;
+}
+
+const { 
+    title = "Flexible & reliable software",
+    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    buttonText = "Read more", 
+    buttonUrl = "#" 
+} = Astro.props;
+---
+
+<section class="value-proposition-section">
+    <div class="value-proposition-section__container-1">
+        <h2 class="value-proposition-section__title">{title}</h2>
+        <p class="value-proposition-section__description">{description}</p>
+    </div>
+    <div class="value-proposition-section__container-2">
+        <a href={buttonUrl} class="value-proposition-section__btn">
+            {buttonText}
+        </a>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+---
+export interface Props {
+    name: string;
+    role: string;
+    imageUrl: string;
+    imageAlt: string;
+}
+
+const { 
+    name, 
+    role, 
+    imageUrl, 
+    imageAlt 
+} = Astro.props;
+---
+
+<article class="profile-card">
+    <div class="profile-card__image-wrapper">
+        <img 
+            src={imageUrl} 
+            alt={imageAlt} 
+            class="profile-card__image"
+        />
+    </div>
+    <h3 class="profile-card__name">{name}</h3>
+    <p class="profile-card__role">{role}</p>
+</article>

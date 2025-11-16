@@ -1,0 +1,35 @@
+---
+import ProfileCard from './ProfileCard.astro';
+
+const teamData = [
+    { name: "Adam Jansen", role: "Manager", imageUrl: "../assets/images/Gemini_Generated_Image_hhbv13hhbv13hhbv.png" },
+    { name: "Bob Larson", role: "Consultant", imageUrl: "../assets/images/Gemini_Generated_Image_9l2oi9l2oi9l2oi9.png" },
+    { name: "Marry Hudson", role: "Consultant", imageUrl: "../assets/images/Gemini_Generated_Image_nhk2hknhk2hknhk2.png" },
+    { name: "Games Larson", role: "IT Expert", imageUrl: "../assets/images/Gemini_Generated_Image_s1c0ocs1c0ocs1c0.png" },
+];
+---
+
+<section class="content-section team-section">
+    <div class="team-section__text-block">
+        <h2 class="team-section__title">We place a heavy focus on enebling and sustaining change</h2>
+        <p class="team-section__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam. At quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+        <a href="#" class="team-section__btn">Learn more</a>
+    </div>
+
+    <div class="team-section__grid">
+        
+        {teamData.map((member) => (
+            <ProfileCard 
+                name={member.name}
+                role={member.role}
+                imageUrl={member.imageUrl}
+                imageAlt={`Foto de perfil de ${member.name}`}
+            />
+        ))}
+        
+    </div>
+</section
