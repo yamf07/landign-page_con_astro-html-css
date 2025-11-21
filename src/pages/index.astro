@@ -6,6 +6,7 @@ import FeatureGridSection from '../components/FeatureGridSection.astro';
 import ValuePropositionSection from '../components/ValuePropositionSection.astro';
 import TeamSection from '../components/TeamSection.astro';
 import ClientLogosSection from '../components/ClientLogosSection.astro';
+import InfoGridSection from '../components/InfoGridSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -16,6 +17,16 @@ import Footer from '../components/Footer.astro';
     <FeatureGridSection />
     <ValuePropositionSection />
     <TeamSection />
+    <ClientLogosSection />
 </main>
 <Footer />
 </Layout>
+
+<style>
+    main {
+        width: 100%;
+        min-height: 100vh;
+        display: felx;
+        flex-direction: column;
+    }
+</style>

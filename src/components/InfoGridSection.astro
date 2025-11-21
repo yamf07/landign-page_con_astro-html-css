@@ -1,0 +1,27 @@
+---
+import InfoCard from "./InfoCard.astro";
+
+import About from '../assets/svg/correr.svg';
+import Phone from '../assets/svg/llamada-telefonica.svg';
+import Ubicacion from '../assets/svg/ubicacion.svg';
+
+// Datos de las tarjetas: usa la variable importada como valor de 'icon'
+const infoData = [
+    { icon: About, title: "", color: "#ffffff" },
+    { icon: Phone, title: "Contact", color: "#ffffff" },
+    { icon: Ubicacion, title: "Assessment", color: "#ffffff" },
+];
+---
+
+<section class="info-content-section">
+    <div class="info-grid-section__grid">
+        {infoData.map((service) => (
+            <InfoCard 
+                icon={service.icon}
+                title={service.title}
+                description="Sample text. Click to select the Text Element."
+                backgroundColor={service.color}
+            />
+        ))}
+    </div>
+</section>

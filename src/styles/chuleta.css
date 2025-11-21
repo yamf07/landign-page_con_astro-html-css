@@ -1,37 +1,5 @@
----
-import Logo2 from '../assets/svg/citibank-3.svg?url';
-import Logo1 from '../assets/svg/ducati-3.svg?url';
-import Logo3 from '../assets/svg/kenwood-logo.svg?url';
-import Logo4 from '../assets/svg/moscom.svg?url';
-import Logo5 from '../assets/svg/nequi-3.svg?url';
+/* CLIENT LOGOS SECTION */
 
-const clientLogos = [
-    { src: Logo1, alt: "cotibank" },
-    { src: Logo2, alt: "ducati" },
-    { src: Logo3, alt: "kenwood" },
-    { src: Logo4, alt: "moscom" },
-    { src: Logo5, alt: "nequi" },
-];
----
-
-<section class="content-logos__section">
-    <h2 class="client-logos-section__title">Here are some of our clients</h2>
-
-    <div class="client-logos-section__list">
-        {clientLogos.map((logo) => (
-            <div class="client-logos-section__item">
-                <img 
-                    src={logo.src} 
-                    alt={logo.alt} 
-                    class="client-logos-section__logo"
-                />
-            </div>
-        ))}
-    </div>
-</section>
-
-<style>
-    
 .content-logos__section {
     align-items: center;
     background-color: var(--color-bg-light);
@@ -49,13 +17,13 @@ const clientLogos = [
     justify-content: space-between;
     align-items: center;
     display: flex;
+    
 }
 
 .client-logos-section__item {
     align-items: center;
     justify-content: baseline;
     width: 120px;
-    padding: 1rem;
 }
 
 .client-logos-section__logo {
@@ -82,5 +50,3 @@ const clientLogos = [
     width: 20rem;
     flex-direction: column;
 }
-
-</style>

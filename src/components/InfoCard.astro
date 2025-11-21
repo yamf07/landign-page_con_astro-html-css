@@ -1,0 +1,31 @@
+---
+export interface Props {
+    icon: any;
+    title: string;
+    description: string;
+    backgroundColor: string;
+}
+
+const { 
+    icon: IconComponent,
+    title, 
+    description, 
+    backgroundColor 
+} = Astro.props;
+---
+
+<article class="info-card" style={`background-color: ${backgroundColor};`}>
+    <a href="#">
+        <div>
+            <div class="info-card__icon-wrapper">
+                <div class="info-card__icon">
+                    <IconComponent /> 
+                </div>
+            </div>
+            <div class="info-card__content">
+                <h3 class="info-card__title">{title}</h3>
+                <p class="info-card__description">{description}</p>
+            </div>
+        </div>
+    </a>
+</article>

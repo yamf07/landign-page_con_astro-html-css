@@ -260,7 +260,7 @@ h1, h2, h3 {
     margin: 0.5rem;
     background-color: #fff1ea;
     border-radius: 30px;
-    display: flexbox;
+    
 
     .profile-card__name, .profile-card__role {
         text-align: center;
@@ -283,40 +283,6 @@ h1, h2, h3 {
 }
 
 /* CLIENT LOGOS SECTION */
-
-.content-logos__section {
-    align-items: center;
-    background-color: var(--color-bg-light);
-    padding: 4rem calc(var(--spacing-unit) * 4);
-    text-align: center;
-}
-
-.client-logos-section__title {
-    font-size: 3rem;
-    color: var(--color-primary);
-}
-
-.client-logos-section__list {
-    margin-top: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    
-}
-
-.client-logos-section__item {
-    align-items: center;
-    justify-content: baseline;
-    width: 120px;
-}
-
-.client-logos-section__logo {
-    width: 100%;
-    height: auto;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: filter 0.3s, opacity 0.3s;
-}
 
 /* FOOTER */
 
